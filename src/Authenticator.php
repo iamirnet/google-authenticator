@@ -18,8 +18,7 @@ class Authenticator
         $this->secret = Secret::create();
         if ($issuer) $this->issuer = $issuer;
         if ($label) $this->label = $label;
-        $qr_image = Secret::generateQrUri($this->secret, $this->issuer, $this->label, $width, $height);
-        return ['secret' => $this->secret, 'qr' => $qr_image];
+        return ['secret' => $this->secret, 'qr_query' => Secret::getUri($this->secret, $this->issuer, $this->label), 'qr_link' => Secret::generateQrUri($this->secret, $this->issuer, $this->label, $width, $height)];
     }
 
     public static function created($issuer = null, $label = null, $width = 200, $height = 200) {

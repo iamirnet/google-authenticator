@@ -1,0 +1,25 @@
+{
+    "name": "iamirnet/google-authenticator",
+    "description": "PHP SDK for Google Authenticator",
+    "keywords": ["google.com","PHP Google Authenticator", "Google Authenticator"],
+    "homepage": "https://php.iamir.net/packages/google-authenticator",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name" : "iamirnet",
+            "email" : "me@iamir.net",
+            "homepage": "https://iamir.net",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "iAmirNet\\GoogleAuthenticator\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
